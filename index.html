@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>INNOVAPE - Sustainable Batteries</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS (4.3.1) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Enable smooth scrolling -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light-grey fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="INNOVAPE Logo" width="150" height="auto"> <!-- Updated logo -->
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- Aligned to right -->
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#problem">Problem</a></li>
+        <li class="nav-item"><a class="nav-link" href="#mission">Mission</a></li>
+        <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <a href="recycling.html" class="btn btn-primary">RECYCLE</a> <!-- Link to the recycling page -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-home py-5" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-12">
+        <h1 class="display-4">POWERING SUSTAINABILITY. REDUCING WASTE.</h1>
+      </div>
+      <div class="col-md-6 col-12 text-center">
+        <p class="lead">Transforming Energy with Eco-Friendly Lithium-Ion Batteries Repurposed from Upcycled Vapes.</p>
+        <a href="#contact" class="btn btn-secondary">Contact Us Now!</a> <!-- Single centered button -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hero Image -->
+<section class="hero-image">
+  <img src="lith.jpg" alt="Lithium Battery Image" class="img-fluid w-100">
+</section>
+
+<!-- Problem Section with Video Background -->
+<section id="problem" class="problem-section">
+  <div class="container-fluid video-container">
+    <!-- Video Background -->
+    <video class="background-video" autoplay muted loop>
+      <source src="Problem.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay and Content -->
+    <div class="overlay"></div> <!-- Optional overlay for darkening the video -->
+    
+    <div class="content">
+      <div class="container">
+        <h2 class="problem-title mb-4">Disposable Vapes: The Problem</h2>
+        <div class="tabs-area text-center">
+          <button class="problem-tab active" data-tab="lithium-waste">Lithium Waste</button>
+          <button class="problem-tab" data-tab="electronic-waste">Electronic Waste</button>
+          <button class="problem-tab" data-tab="landfill-impact">Landfill Impact</button>
+        </div>
+      </div>
+
+      <!-- Problem Content Area -->
+      <div class="problem-content text-center">
+        <!-- Lithium Waste Slide (Visible by default) -->
+        <div id="lithium-waste" class="problem-slide active">
+          <div class="problem-box">
+            <p>10 tonnes of lithium are discarded each year due to the improper disposal of disposable vapes.</p>
+          </div>
+        </div>
+
+        <!-- Electronic Waste Slide -->
+        <div id="electronic-waste" class="problem-slide">
+          <div class="problem-box">
+            <p>Each vape contains about 0.15 grams of lithium, and their widespread disposal significantly contributes to electronic waste.</p>
+          </div>
+        </div>
+
+        <!-- Landfill Impact Slide -->
+        <div id="landfill-impact" class="problem-slide">
+          <div class="problem-box">
+            <p>Over 500 million disposable vapes end up in landfills each year, causing environmental damage and wasting valuable resources.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for the interactive tabs -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.problem-tab');
+  const slides = document.querySelectorAll('.problem-slide');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      slides.forEach(slide => slide.classList.remove('active'));
+
+      this.classList.add('active');
+      const selectedSlide = document.getElementById(this.getAttribute('data-tab'));
+      selectedSlide.classList.add('active');
+    });
+  });
+});
+</script>
+
+<!-- Mission Section -->
+<section id="mission" class="mission-section py-5">
+  <div class="container">
+    <div class="mission-box" style="background-image: url('mission.jpg'); background-size: cover; background-position: center; position: relative; border-radius: 30px; padding: 50px;">
+      <div class="text-center text-white h-100 d-flex flex-column justify-content-center">
+        <h2 class="mb-3">EMPOWERING A GREENER FUTURE</h2>
+        <p class="lead">
+          Innovape's Mission: <br>
+          To transform the energy landscape, we innovate by reclaiming lithium-Ion from disposable vapes, crafting sustainable batteries that power our world with a commitment to eco-consciousness and renewable resources.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Section -->
+<section id="product" class="product-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Text Column -->
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <h2>EcoCharge – The Sustainable Lithium-Ion Battery Solution</h2>
+            <p class="mb-4">Innovape offers EcoCharge, an innovative lithium-ion portable battery crafted from recycled disposable vapes. EcoCharge provides reliable power while reducing electronic waste, embodying our commitment to a sustainable and eco-friendly future. Ideal for modern needs, it delivers high performance and environmental responsibility in one package.</p>
+          </blockquote>
+        </div>
+  
+        <!-- Right Image Column -->
+        <div class="col-md-6 text-center">
+          <img src="create.jpg" alt="EcoCharge Product Image" class="img-fluid rounded-custom">
+        </div>
+      </div>
+    </div>
+</section>
+  
+<!-- Team Section -->
+<section id="team" class="team py-5">
+     <div class="container">
+        <h2 class="text-center mb-5">Meet Our Team</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member text-center">
+                    <img src="tolu.png" alt="Tolu Sami" class="img-fluid rounded-circle mb-3">
+                    <h3>Tolu Sami</h3>
+                    <p>Project Manager</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member text-center">
+                    <img src="carolinaa.jpeg" alt="Carolina Gonzalez" class="img-fluid rounded-circle mb-3">
+                    <h3>Carolina Gonzalez</h3>
+                    <p>Business Development Coordinator</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member text-center">
+                    <img src="tai.png" alt="Tai Adewoye" class="img-fluid rounded-circle mb-3">
+                    <h3>Tai Adewoye</h3>
+                    <p>Technical Coordinator</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member text-center">
+                    <img src="fatima.png" alt="Fatima Ghadbawi" class="img-fluid rounded-circle mb-3">
+                    <h3>Fatima Al-Zahra Ghadbawi</h3>
+                    <p>Operations Coordinator</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-member text-center">
+                    <img src="shab.png" alt="Shabnam Moominzada" class="img-fluid rounded-circle mb-3">
+                    <h3>Shabnam Moominzada</h3>
+                    <p>Operations Coordinator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<footer id="contact" class="bg-dark-green text-white py-5">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Left Column: Contact Information -->
+        <div class="col-md-6">
+          <h4 class="mb-4">INNOVAPE</h4>
+          <p>Email: <a href="mailto:info@innovape.com" class="text-white">info@innovape.com</a></p>
+          <p>Phone: +1 (555) 902-8832</p>
+          <p>Address: 55 Laurier Avenue East, Ottawa, ON</p>
+  
+          <div class="social-icons mt-3">
+            <a href="https://www.instagram.com/projectinnovape/" target="_blank">
+              <img src="insta.png" alt="Instagram" width="40px">
+            </a>
+          </div>
+        </div>
+  
+
+  
+        <!-- Right Column: Request a Meeting Form -->
+        <div class="col-md-6 text-md-right">
+          <h4 class="mb-4">Let's Talk</h4>
+          <form>
+            <div class="form-group">
+              <label for="emailAddress" class="sr-only">Email address</label>
+              <input type="email" class="form-control" id="emailAddress" placeholder="Your email address" required>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+        
+      </div>
+  
+      <!-- Contact Bottom -->
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <p>&copy; 2024 INNOVAPE, Inc. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#terms" class="text-white">Terms of Use</a></li>
+            <li class="list-inline-item"><a href="#privacy" class="text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+    <!-- Bootstrap 4 JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,630 @@
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.recycling {
+    padding: 120px 20px; /* Increased padding for more space */
+    background-color: #e1f0dd; /* Soft, clean background */
+    text-align: center;
+    min-height: 100vh; /* Adjusted height */
+    background-image: url('recycling-bg.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    margin-top: 100px;
+}
+
+.recycling h2 {
+    font-size: 3rem; /* Larger and bolder heading */
+    color: #2e4627;
+    margin-bottom: 60px;
+    font-family: 'Averia Serif Libre', serif;
+    font-weight: 700;
+}
+
+.recycling p {
+    font-size: 1.5rem; /* Larger font for the intro paragraph */
+    color: #2e4627;
+    line-height: 1.6;
+    max-width: 900px; /* Wider paragraph text */
+    margin: 0 auto;
+    margin-bottom: 80px;
+    font-family: 'Nunito', sans-serif; /* Soft font for better readability */
+}
+
+.recycling-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* More space between the steps */
+    max-width: 1100px; /* Larger container for the steps */
+    margin: 0 auto;
+}
+
+.step {
+    background-color: #ffffff;
+    padding: 60px 40px; /* Increased padding for a larger feel */
+    border-radius: 20px; /* More rounded corners for a cute effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+    border: 2px solid #e0e0e0; /* Light border for a defined look */
+}
+
+.step:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.step h3 {
+    font-size: 2.5rem; /* Bigger heading for each step */
+    color: #2e4627;
+    margin-bottom: 20px;
+    font-family: 'Averia Serif Libre', serif; /* Friendly font */
+    font-weight: 700;
+}
+
+.step p {
+    font-size: 1.4rem; /* Larger text for the description */
+    color: #2e4627;
+    line-height: 1.8;
+    font-family: 'Nunito', sans-serif; /* Clean and cute font */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .recycling h2 {
+        font-size: 2.5rem;
+    }
+
+    .recycling p {
+        font-size: 1.25rem;
+    }
+
+    .step {
+        padding: 40px 20px; /* Adjusted padding for smaller screens */
+    }
+
+    .step h3 {
+        font-size: 2rem;
+    }
+
+    .step p {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 1.3rem; /* Increase font size for zoomed-in effect */
+    height: 100px;
+    background-color: rgba(240, 240, 240, 0.7); /* Light grey with transparency */
+    backdrop-filter: blur(10px); /* Adds the blur effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar links */
+.navbar a {
+    color: #000000;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+    color: #2ca05a;
+}
+
+/* Button styling */
+.navbar .btn-primary {
+    background-color: #2ca05a;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+}
+
+/* Hover effect for button */
+.navbar .btn-primary:hover {
+    background-color: #29a552;
+}
+
+/* Hero Section */
+.hero-home {
+    padding-top: 150px; /* Added padding to account for the fixed navbar */
+    padding-bottom: 100px;
+    text-align: left;
+    margin-top: 105px;
+    background-color: #fcfdf1;
+}
+
+.hero-home h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 4.0rem;
+    font-weight: 800;
+    color: #000000;
+    margin-left: -70px;
+}
+
+.hero-home p {
+    font-size: 1.2rem; /* Slightly larger font size */
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero-home .btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero-home .btn-secondary {
+    background-color: #72b56c;
+    color: #ffffff;
+    padding: 8px 20px; /* Adjusts the space inside the button */
+    font-size: 0.875rem; /* Reduces the text size */
+    width: auto; /* Ensures the button width is not too wide */
+
+}
+
+.hero-home .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Image under Hero */
+.hero-image {
+    padding: 60px 0;
+    text-align: center;
+    margin-top: -60px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: 700px;
+}
+
+.full-screen-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+  }
+
+/* Mission Section */
+#mission {
+    background-color: #ffffff;
+    margin-top: 60px; /* Adds space above the section */
+    margin-bottom: 100px; /* Adds space below the section */
+}
+
+.mission-box {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 600px; /* Adjust height as needed */
+    color: white;
+    border-radius: 20px; /* Rounder corners */
+    padding: 30px; /* Adds space inside the container */
+    overflow: hidden; /* Ensures the content inside respects the rounded borders */
+    width: 100%; /* This will make the container take 90% of the width */
+    margin: 0 auto; /* Centers the container */
+}
+
+#mission .text-center h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+#mission .text-center p {
+    font-size: 1.45rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Video container matching the mission section size */
+.video-container {
+    position: relative;
+    height: 600px; /* Matches the mission box height */
+    width: 100%; /* Matches the mission box width */
+    margin: 0 auto;
+    border-radius: 30px; /* Adds rounded corners */
+    overflow: hidden; /* Ensures video respects the rounded corners */
+    margin-top: 60px; /* Adjusts the space between sections */
+}
+
+/* Video element */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Scales the video to fill the section */
+    z-index: 1;
+}
+
+/* Overlay on top of the video */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 2;
+    border-radius: 30px; /* Ensures the overlay also has rounded corners */
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures content takes full height of the container */
+    padding-top: 160px; /* Adds space to lower the title and tabs */
+    text-align: center;
+}
+
+.problem-title {
+    font-size: 2.8rem;
+    font-weight: 700; 
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tab buttons */
+.tabs-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.problem-tab {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #2ca05a;
+    color: #000;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.problem-tab.active {
+    background-color: #2ca05a;
+    color: white;
+}
+
+/* Problem content box */
+.problem-box {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 20px; /* Rounded corners */
+    color: black;
+    width: 60%; /* Control the width of the problem box */
+    margin: 0 auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: -50px; /* Moves the problem content higher */
+}
+
+/* Center the problem content vertically */
+.problem-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Center vertically */
+}
+  .problem-slide {
+    display: none;
+  }
+  
+  .problem-slide.active {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .problem-box {
+      width: 90%;
+    }
+
+    .background-video{
+        width: 100%;
+    }
+  }
+
+
+
+
+
+
+/* Custom Font (using Söhne or a similar Google font like Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body, h2, p {
+    font-family: 'Inter', sans-serif; /* Inter is a similar substitute for Söhne */
+}
+/* Product Section */
+.product-section {
+    background-color: #ffffff;
+    padding: 100px 0; /* Padding for extra space around the content */
+    min-height: 700px; /* Set a minimum height to make the section taller */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    margin-top: -80px;
+    margin-bottom: 70px;
+    
+}
+
+.product-section h2 {
+    font-size: 2.8rem; /* Larger font size */
+    font-weight: 600; /* Medium-bold weight */
+    color: #213c23;
+    margin-bottom: 50px;
+    
+}
+
+.product-section p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #555;
+    max-width: 500px; /* Compress the text width */
+    margin-bottom: 0px;
+}
+
+/* Blockquote style for the text */
+.product-section blockquote {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #213c23;
+    border-left: none;
+    margin: 0;
+}
+
+/* Make the image longer and not wider with rounded corners */
+.product-section img {
+    width: 100%;
+    max-height: 1900px; /* Set a maximum height for a taller image */
+    object-fit: cover; /* Ensure the image scales well */
+    border-radius: 20px; /* Rounded edges */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .product-section h2 {
+        font-size: 2rem; /* Adjust size on smaller screens */
+    }
+
+    .product-section p {
+        font-size: 1rem;
+        max-width: 100%; /* Let the text stretch to full width */
+    }
+
+    .product-section img {
+        max-height: 400px; /* Adjust image size for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+/* Team Section */
+.team {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2e4627;
+    margin-bottom: 50px;
+}
+
+.team .team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid #e3e3d3;
+}
+
+.team .team-member h3 {
+    margin: 15px 0 10px 0;
+    color: #2e4627;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.team .team-member p {
+    color: #555;
+    font-size: 20px;
+}
+
+/* Adjusts team section alignment */
+.team .row {
+    justify-content: center; /* Centers all team members horizontally */
+}
+
+@media (max-width: 768px) {
+    .team h2 {
+        font-size: 30px;
+    }
+
+    .team .team-member {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    background-color: #063806; /* Dark green background */
+    padding: 50px 0;
+    color: #ffffff; /* White text */
+}
+
+.contact-cta h2 {
+    color: #ffffff; /* White for the heading */
+    font-size: 2rem;
+}
+
+.contact-logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Contact Section Styling */
+.contact-contact h4, .footer-contact p, .footer-contact a {
+    color: #ffffff; /* White text */
+}
+
+.contact-contact input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-contact .btn-success {
+    background-color: #8bcb73;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-contact .btn-success:hover {
+    background-color: #6faa55;
+}
+
+/* Social Icons Styling */
+.social-icons a {
+    color: #ffffff;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #8bcb73;
+}
+
+/* Contact Bottom */
+.contact-b {
+    background-color: #004d00; /* Darker green */
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-b p, .terms-conditions a {
+    color: #ffffff; /* White text */
+}
+
+.terms-conditions {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+
+.terms-conditions a {
+    color: #ffffff; /* White for terms and conditions links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.terms-conditions a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    #contact .row {
+        text-align: center;
+    }
+
+    .contact-contact .form-control {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+
+    .terms-conditions {
+        display: block;
+        margin-top: 20px;
+    }
+
+    #mission .mission-box {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-home h1 {
+        font-size: 3.5rem;
+        margin-left: 0;
+    }
+
+    .collapse.navbar-collapse {
+        background-color: rgba(240, 240, 240);
+        padding: 15px; 
+        transition: none;
+    }
+
+}
+
+@media (max-width: 1320px) {
+    #home .container h1{
+        font-size: 2.5rem;
+        margin: 0 auto;
+    }  
+}
